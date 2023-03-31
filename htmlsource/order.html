@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        text area : 사용자로부터 좀 더 많은 정보를 입력받을 때
+        row : 행
+        cols : 열
+    -->
+    <h1><b>상품 주문서</b></h1>
+    <fieldset>
+      <legend><b>개인 정보</b></legend>
+      <ul>
+        <li>
+          <label for=""><b>이름</b></label>
+          <input type="text" placeholder="여백없이 입력" />
+        </li>
+        <li>
+          <label for=""><b>연락처</b></label>
+          <input type="text" placeholder="연락가능한 번호" />
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend><b>배송지 정보</b></legend>
+
+      <ul>
+        <li>
+          <label for=""><b>주소</b></label>
+          <input type="text" name="addr" size="40" />
+        </li>
+        <li>
+          <label for=""><b>전화번호</b></label>
+          <input type="text" name="tel" />
+        </li>
+        <li>
+          <label for=""><b>메모</b></label>
+          <textarea name="memo" id="" cols="40" rows="3"></textarea>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend><b>주문 정보</b></legend>
+
+      <ul>
+        <li>
+          <input type="checkbox" name="주문정보" />
+          <label for=""
+            >과테말라 안티구아 (100g)<input
+              type="number"
+              value="0"
+              min="0"
+              max="5"
+            />개</label
+          >
+        </li>
+        <li>
+          <input type="checkbox" name="주문정보" />
+          <label for=""
+            >인도네시아 만델링 (100g)<input
+              type="number"
+              value="0"
+              min="0"
+              max="5"
+            />개</label
+          >
+        </li>
+
+        <li>
+          <input type="checkbox" name="주문정보" />
+          <label for=""
+            >탐라는도다(블렌딩) (100g)<input
+              type="number"
+              value="0"
+              min="0"
+              max="5"
+            />개</label
+          >
+        </li>
+      </ul>
+    </fieldset>
+    <input type="submit" value="주문하기" />
+    <input type="reset" value="다시작성" />
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .ecosystem {
+        color: red;
+      }
+      .tiger {
+        color: blue;
+      }
+      .area p {
+        color: red;
+      }
+      p {
+        color: blue;
+      }
+
+      #text1 {
+        color: green;
+      }
+      #text2 {
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 우선 순위 : 스타일 우선순위 
+        1. !important : 인라인 내에 그냥 선언하면 됨 = 1000점
+        2. 인라인 선언 : p id="text2" style=color : brown <- 인라인(style) = 500점
+        3. 아이디 선택자 = 100점
+        4. 클래스 선택자(가상 포함) = 10점
+        5. 태그 선택자(가상 요소 ::before, ::after ...포함) = 1점
+        6. 전체 선택자
+        7. 상속
+
+
+        .list li:item{} 21pt (10+10+1점)
+        .list li:hover{} 21pt (10+10+1점)
+        .box::after{} 11pt (10+1점)
+        #submit span{} 101pt (100+1점)
+        
+        :not() 은 점수 없음
+        :not(.box){} 10pt (0+10점)
+        
+        스타일 상속 : 자식 요소에서 별도로 스타일을 지정하지 않는 경우 부모의 스타일 속성이 전달됨
+                        -글자를 다루는 속성들이 주로 전달됨
+    -->
+    <div class="ecosystem">
+      <div class="animal">
+        동물
+        <div class="tiger">호랑이</div>
+        <div class="lion">사자</div>
+        <div class="elephant">코끼리</div>
+      </div>
+      <div class="plant">식물</div>
+    </div>
+    <div class="area">
+      <p id="text1" !important>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+        aliquam consequuntur itaque alias ea quasi voluptate, quo temporibus
+        magni vel accusantium, veritatis delectus illo! Eaque facilis blanditiis
+        voluptatum quos qui.
+      </p>
+      <p id="text2" style="color: brown">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+        consequatur libero officiis, laboriosam mollitia consectetur, aut
+        recusandae nemo delectus asperiores est repudiandae laudantium numquam
+        repellendus commodi! Blanditiis dolor maxime veritatis.
+      </p>
+    </div>
+  </body>
+</html>
